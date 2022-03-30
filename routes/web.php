@@ -24,6 +24,10 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('/home', function () {
+    return redirect('/');
+});
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
